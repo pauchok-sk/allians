@@ -1,0 +1,96 @@
+.s-address {
+  position: relative;
+  padding: 95px 0px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  @include laptop-middle {
+    display: block;
+    padding: 60px 0px 0px 0px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: rgba(33, 33, 33, 0.20);
+    z-index: -1;
+    @include laptop-middle {
+      display: none;
+    }
+  }
+  &__body {
+    max-width: 520px;
+    margin-left: auto;
+    @include laptop-middle {
+      max-width: none;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  &__head {
+    padding: 25px 40px;
+    border-radius: 4px;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 15px;
+
+    font-size: 18px;
+    line-height: 140%;
+
+    @include tablet-min {
+      padding: 15px 25px;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--red);
+    }
+  }
+  &__main {
+    padding: 40px;
+    background-color: white;
+    border-radius: 4px;
+    @include tablet-min {
+      padding: 25px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    li {
+      display: flex;
+      align-items: start;
+      gap: 15px;
+
+      font-size: 18px;
+      line-height: 140%;
+
+      img {
+        flex-shrink: 0;
+      }
+    }
+  }
+  &__map {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    @include laptop-middle {
+      position: static;
+      width: 100%;
+      height: 500px;
+      @include laptop-min {
+        height: 400px;
+      }
+      @include tablet {
+        height: 350px;
+      }
+    }
+  }
+}

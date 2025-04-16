@@ -1,0 +1,19 @@
+.sect-p {
+  padding: 100px 0px;
+  @include laptop-min {
+    padding: 80px 0px;
+  }
+  @include tablet {
+    padding: 60px 0px;
+  }
+}
+
+.sect-m {
+  margin: 100px 0px;
+  @include laptop-min {
+    margin: 80px 0px;
+  }
+  @include tablet {
+    margin: 60px 0px;
+  }
+}
