@@ -1,0 +1,53 @@
+.btn-reset {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.btn-arrow {
+  display: flex;
+  width: fit-content;
+
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 140%;
+
+  @include hover {
+    span {
+      background-color: var(--thunder);
+    }
+    div {
+      background-color: var(--red);
+      color: white;
+    }
+  }
+
+  span {
+    display: block;
+    padding: 20px 36px;
+    background-color: var(--red);
+    border-radius: 4px;
+    color: white;
+    transition: background-color .2s ease, color .2s ease;
+  }
+
+  div {
+    @include flex-center;
+    width: 65px;
+    height: auto;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}

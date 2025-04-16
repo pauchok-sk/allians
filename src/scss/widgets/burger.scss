@@ -1,0 +1,136 @@
+.burger-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--black);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  transition: visibility .4s ease, opacity .4s ease;
+
+  &._active {
+    visibility: visible;
+    opacity: 0.5;
+  }
+}
+.burger {
+  background-color: white;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  overflow-y: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 340px;
+  max-width: 100%;
+  padding: 30px 20px;
+  z-index: 110;
+  color: white;
+  transition: transform .4s ease;
+  background-color: var(--black);
+  transform: translateX(-350px);
+  @include laptop-min {
+    display: flex;
+  }
+
+  &._open {
+    transform: translateX(0)
+  }
+  &__header {
+    @include flex-between;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+    margin-bottom: 40px;
+  }
+  &__logo {
+    display: block;
+    width: 150px;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  &__close {
+    @include flex-center;
+    position: relative;
+    width: 30px;
+    height: 30px;
+
+    div {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: currentColor;
+
+      &:first-child {
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+
+    a {
+      display: block;
+      width: fit-content;
+      font-size: 16px;
+      line-height: 130%;
+      font-weight: 300;
+      transition: opacity .2s ease;
+      @include hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  &__contacts {
+    margin-top: auto;
+  }
+  &__social {
+    display: flex;
+    gap: 20px;
+  }
+  &__social-btn {
+    @include flex-center;
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: white;
+    color: var(--black);
+    transition: color .2s ease, background-color .2s ease;
+    @include hover {
+      color: white;
+      background-color: var(--thunder);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__contacts-main {
+    margin-top: 20px;
+  }
+  &__contacts-tel {
+    display: block;
+    width: fit-content;
+    font-weight: 600;
+    font-size: 20px;
+    transition: opacity .2s ease;
+    @include hover {
+      opacity: 0.5;
+    }
+  }
+  &__address {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.5;
+  }
+}
