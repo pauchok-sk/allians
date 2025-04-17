@@ -1,1 +1,25 @@
+.s-title {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0px 0px 50px 0px;
+  @include laptop-min {
+    font-size: 38px;
+  }
+  @include tablet {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+}
 
+.t-title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 140%;
+  @include laptop-min {
+    font-size: 28px;
+  }
+  @include tablet {
+    font-size: 24px;
+  }
+}

@@ -17,4 +17,31 @@ export default function sliders() {
       }
     })
   }
+
+  const teamSlider = document.querySelector(".s-team__slider");
+
+  if (teamSlider) {
+    const slider = new Swiper(teamSlider, {
+      speed: 700, 
+      spaceBetween: 20,
+      slidesPerView: "auto",
+      autoplay: {
+        delay: 2500
+      },
+      navigation: {
+        prevEl: ".s-team .slider-btn._prev",
+        nextEl: ".s-team .slider-btn._next"
+      },
+      breakpoints: {
+       1366: {
+        spaceBetween: 20,
+        slidesPerView: 4,
+       },
+       992: {
+        spaceBetween: 20,
+        slidesPerView: 3,
+       }
+      }
+    })
+  }
 }

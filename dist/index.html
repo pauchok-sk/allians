@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Альянс</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250417130504" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250417130504">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&_v=20250417130504" rel="stylesheet" />
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="container header__container">
+			<nav class="header__nav">
+				<ul class="list header__list">
+					<li><a href="#">Самовывоз</a></li>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Новости</a></li>
+					<li><a href="#">Вакансии</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+			<div>
+				<a href="/" class="header__logo">
+					<img src="img/logo.svg" alt="logo" />
+				</a>
+			</div>
+			<div class="header__contacts">
+				<ul class="list header__social">
+					<li>
+						<a href="#" target="_blank" class="header__social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="header__social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+				<div class="header__contacts-main">
+					<a href="tel:+78432126222" class="header__contacts-tel">+7 (843) 212-62-22</a>
+					<div class="header__address">г. Казань, ул. Хлебозаводская, д. 7В</div>
+				</div>
+			</div>
+			<button class="btn-reset header__burger-btn" id="burger-open">
+				<div></div>
+				<div></div>
+				<div></div>
+			</button>
+		</div>
+	</header>
+	<div class="header__submenu">
+		<div class="container">
+			<ul class="list header__submenu-list">
+				<li>
+					<a href="#">
+						<span>Черные металлы</span>
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</a>
+					<ul>
+						<li><a href="#">Черные металлы</a></li>
+						<li><a href="#">Черные металлы</a></li>
+						<li><a href="#">Черные металлы</a></li>
+						<li><a href="#">Черные металлы</a></li>
+						<li><a href="#">Черные металлы</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>Цветные металлы</span>
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</a>
+					<ul>
+						<li><a href="#">Цветные металлы</a></li>
+						<li><a href="#">Цветные металлы</a></li>
+						<li><a href="#">Цветные металлы</a></li>
+						<li><a href="#">Цветные металлы</a></li>
+						<li><a href="#">Цветные металлы</a></li>
+						<li><a href="#">Цветные металлы</a></li>
+						<li><a href="#">Цветные металлы</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>Драг металлы</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>Другое</span>
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</a>
+					<ul>
+						<li><a href="#">Цветные металлы</a></li>
+						<li><a href="#">Цветные металлы</a></li>
+						<li><a href="#">Цветные металлы</a></li>
+						<li><a href="#">Цветные металлы</a></li>
+						<li><a href="#">Цветные металлы</a></li>
+						<li><a href="#">Цветные металлы</a></li>
+						<li><a href="#">Цветные металлы</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+						<span>Утилизация авто</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>Демонтаж</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="burger-overlay" id="burger-overlay"></div>
+	<div class="burger" id="burger">
+		<div class="burger__header">
+			<a href="/" class="burger__logo">
+				<img src="img/logo.svg" alt="logo" />
+			</a>
+			<button class="btn-reset burger__close" id="burger-close">
+				<div></div>
+				<div></div>
+			</button>
+		</div>
+		<ul class="list burger__list">
+			<li><a href="#">Самовывоз</a></li>
+			<li><a href="#">О компании</a></li>
+			<li><a href="#">Новости</a></li>
+			<li><a href="#">Вакансии</a></li>
+			<li><a href="#">Контакты</a></li>
+		</ul>
+		<div class="burger__contacts">
+			<ul class="list burger__social">
+				<li>
+					<a href="#" target="_blank" class="burger__social-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" class="burger__social-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
+			<div class="burger__contacts-main">
+				<a href="tel:+78432126222" class="burger__contacts-tel">+7 (843) 212-62-22</a>
+				<div class="burger__address">г. Казань, ул. Хлебозаводская, д. 7В</div>
+			</div>
+		</div>
+	</div>
+
+	<main>
+
+		<section class="hero">
+			<div class="container">
+				<h1 class="hero__title">Приём, демонтаж и вывоз металлолома</h1>
+				<p class="hero__content">Приём лома в Казани и Республике Татарстан на лучших условиях</p>
+				<a href="#" class="btn-arrow">
+					<span>Смотреть цены</span>
+					<div>
+						<svg>
+							<use xlink:href='img/icons/icons.svg#icon-arrow-rotate'></use>
+						</svg>
+					</div>
+				</a>
+				<div class="hero__contacts">
+					<a href="tel:+78432126222" class="hero__tel">+7 (843) 212-62-22</a>
+					<ul class="list hero__social">
+						<li>
+							<a href="#" target="_blank" class="hero__social-btn">
+								<svg>
+									<use xlink:href='img/icons/icons.svg#icon-tg'></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="hero__social-btn">
+								<svg>
+									<use xlink:href='img/icons/icons.svg#icon-wh'></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<img src="img/hero.jpg" alt="image" class="hero__img">
+		</section>
+		<section class="s-address">
+			<div class="container">
+				<div class="s-address__body">
+					<div class="s-address__head">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-location"></use>
+						</svg>
+						<span>г. Казань, ул. Хлебозаводская, д. 7В</span>
+					</div>
+					<div class="s-address__main">
+						<ul class="list s-address__list">
+							<li>
+								<img src="img/figure.svg" alt="icon" />
+								<span>Выгодные цены</span>
+							</li>
+							<li>
+								<img src="img/figure.svg" alt="icon" />
+								<span>Cодействие на всех этапах погрузки и выгрузки</span>
+							</li>
+							<li>
+								<img src="img/figure.svg" alt="icon" />
+								<span>Бесплатные грузчики при самовывозе от 50 кг</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="s-address__map" id="map" data-center="[55.84526356887869,49.05418599999999]" data-zoom="16"></div>
+		</section>
+
+		<section class="s-offer sect-p">
+			<div class="container">
+				<div class="swiper s-offer__slider">
+					<div class="swiper-wrapper">
+						<a href="#" class="swiper-slide s-offer__item">
+							<div class="s-offer__item-body">
+								<h5 class="s-offer__item-title">Черный лом</h5>
+								<div class="s-offer__item-price">от 700 рублей за 1 кг</div>
+							</div>
+							<div class="s-offer__item-rect">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</a>
+						<a href="#" class="swiper-slide s-offer__item">
+							<div class="s-offer__item-body">
+								<h5 class="s-offer__item-title">Цветной лом</h5>
+								<div class="s-offer__item-price">от 700 рублей за 1 кг</div>
+							</div>
+							<div class="s-offer__item-rect">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</a>
+						<a href="#" class="swiper-slide s-offer__item">
+							<div class="s-offer__item-body">
+								<h5 class="s-offer__item-title">Обработка лома</h5>
+								<div class="s-offer__item-price">от 700 рублей за 1 кг</div>
+							</div>
+							<div class="s-offer__item-rect">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-rotate"></use>
+								</svg>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="s-why sect-m">
+			<img src="img/logo-black.svg" alt="logo" class="s-why__logo">
+			<div class="container">
+				<div class="s-why__head">
+					<div class="s-why__aside">
+						<h5 class="t-title s-why__aside-title">
+							Почему нужно выбрать Тимер Альянс?
+						</h5>
+						<ul class="list s-why__aside-list">
+							<li>
+								<img src="img/figure.svg" alt="icon" />
+								<span>4 пункта приема лома в городе Казань</span>
+							</li>
+							<li>
+								<img src="img/figure.svg" alt="icon" />
+								<span>Взвешиваем на откалиброванных весах</span>
+							</li>
+							<li>
+								<img src="img/figure.svg" alt="icon" />
+								<span>Вывозим лом на своем транспорте</span>
+							</li>
+						</ul>
+					</div>
+					<div class="s-why__info">
+						<h2 class="s-title">Тимер Альянс — это</h2>
+						<div class="s-why__content">
+							<p>
+								Компания «Тимер Альянс» дорого принимает лом черных и цветных
+								металлов в Казани. Также вы можете сдать автомобильные аккумуляторы,
+								полиэтиленовые трубы, электродвигатели.
+							</p>
+							<p>
+								Фирме принадлежат четыре пункта приема лома в разных районах города.
+								Если возникают трудности с доставкой металлолома в пункт приема,
+								можно вызвать нашего сотрудника. Мы бесплатно подадим транспорт для
+								забора вашей партии лома.
+							</p>
+							<p>
+								Кроме того, наши специалисты рады оказать дополнительные услуги:
+								резка и демонтаж металлоконструкций, утилизация автомобилей.
+							</p>
+							<p>
+								Вы можете привезти в пункты приема металлолома «Тимер
+								Альянс» изделия из черных и цветных металлов в любом объеме. Для
+								определения стоимости наши специалисты взвешивают партию на
+								откалиброванных весах. При необходимости проводится анализ для
+								проверки состава сплава.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="s-why__footer">
+					<h3 class="t-title s-why__footer-title">
+						Какие услуги оказывает наш пункт приема металлолома?
+					</h3>
+					<ul class="list s-why__footer-list">
+						<li>
+							Бесплатный выезд на объект для всех клиентов, которым нужен прием
+							металлолома в Казани
+						</li>
+						<li>
+							Утилизация старых автомобилей. Наша компания имеет необходимые
+							разрешительные документы для утилизации авто и специальное
+							оборудование
+						</li>
+						<li>
+							Резка металлолома и демонтаж металлических конструкций (гаражей,
+							ангаров и т.д.) на объекте заказчика с последующим вывозом при помощи
+							ломовоза
+						</li>
+						<li>
+							Мы принимаем чермет, цветные и драгоценные металлы, катализаторы,
+							аккумуляторные батареи, платы, электродвигатели, полиэтиленовые трубы
+							для газо- и водоснабжения
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="s-prices sect-p">
+			<div class="container">
+				<h2 class="s-title">Актуальные цены на 14 апреля 2025 года</h2>
+				<div data-spollers class="s-prices__spollers">
+					<div class="s-prices__spoller-col">
+						<div class="s-prices__spoller">
+							<button data-spoller class="btn-reset s-prices__spoller-btn">
+								<span>Чёрный металл</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+								</svg>
+							</button>
+							<div>
+								<ul class="list s-prices__spoller-list">
+									<li>
+										<span>Лом 3А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 16А</span>
+										<span>7000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="s-prices__spoller">
+							<button data-spoller class="btn-reset s-prices__spoller-btn">
+								<span>Аккумуляторы</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+								</svg>
+							</button>
+							<div>
+								<ul class="list s-prices__spoller-list">
+									<li>
+										<span>Лом 3А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 16А</span>
+										<span>7000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="s-prices__spoller">
+							<button data-spoller class="btn-reset s-prices__spoller-btn">
+								<span>Цветной металл</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+								</svg>
+							</button>
+							<div>
+								<ul class="list s-prices__spoller-list">
+									<li>
+										<span>Лом 3А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 16А</span>
+										<span>7000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="s-prices__spoller-col">
+						<div class="s-prices__spoller">
+							<button data-spoller class="btn-reset s-prices__spoller-btn">
+								<span>Катализаторы</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+								</svg>
+							</button>
+							<div>
+								<ul class="list s-prices__spoller-list">
+									<li>
+										<span>Лом 3А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 16А</span>
+										<span>7000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="s-prices__spoller">
+							<button data-spoller class="btn-reset s-prices__spoller-btn">
+								<span>Драгоценные металлы</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+								</svg>
+							</button>
+							<div>
+								<ul class="list s-prices__spoller-list">
+									<li>
+										<span>Лом 3А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 16А</span>
+										<span>7000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="s-prices__spoller">
+							<button data-spoller class="btn-reset s-prices__spoller-btn">
+								<span>Платы</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+								</svg>
+							</button>
+							<div>
+								<ul class="list s-prices__spoller-list">
+									<li>
+										<span>Лом 3А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 16А</span>
+										<span>7000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="s-prices__spoller">
+							<button data-spoller class="btn-reset s-prices__spoller-btn">
+								<span>ПНД</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+								</svg>
+							</button>
+							<div>
+								<ul class="list s-prices__spoller-list">
+									<li>
+										<span>Лом 3А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 16А</span>
+										<span>7000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+									<li>
+										<span>Лом 5А</span>
+										<span>16000</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="s-prices__form-wrapper">
+					<div class="s-prices__form-head">
+						<img src="img/figure.svg" alt="icon" />
+						<div>
+							<h3 class="s-prices__form-title">Бесплатно оцените</h3>
+							<p class="s-prices__form-content">сколько вы получите денег за сдачу металлолома</p>
+						</div>
+					</div>
+					<form action="#" class="s-prices__form">
+						<div class="s-prices__form-col">
+							<div class="s-prices__form-item">
+								<input type="text" placeholder="Имя" class="input" />
+							</div>
+							<div class="s-prices__form-item">
+								<input type="tel" placeholder="Телефон" class="input" />
+							</div>
+							<p class="s-prices__form-policy _desk">
+								Нажимая “Рассчитать”, вы соглашаетесь с
+								<a href="#">Политикой конфиденциальности</a>
+							</p>
+						</div>
+						<div class="s-prices__form-col">
+							<div class="s-prices__form-item _fill">
+								<textarea placeholder="Опишите, что вы сдаете" class="input"></textarea>
+							</div>
+							<button class="btn-arrow s-prices__form-btn">
+								<span>Рассчитать</span>
+								<div>
+									<svg>
+										<use xlink:href='img/icons/icons.svg#icon-arrow-rotate'></use>
+									</svg>
+								</div>
+							</button>
+						</div>
+						<p class="s-prices__form-policy _mobile">
+							Нажимая “Рассчитать”, вы соглашаетесь с
+							<a href="#">Политикой конфиденциальности</a>
+						</p>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<section class="s-adv sect-m">
+			<div class="container s-adv__container">
+				<h2 class="s-adv__title s-title">
+					Преимущества <br />
+					Тимер Альянс
+				</h2>
+			</div>
+			<div class="s-adv__body">
+				<div class="s-adv__item">
+					<img src="img/adv.svg" alt="icon" class="s-adv__item-icon" />
+					<div>
+						<h5 class="s-adv__item-title">Работа с организациями</h5>
+						<p class="s-adv__item-content">
+							Идейные соображения высшего порядка, а также консультация с широким
+							активом в значительной степени обуславливает создание
+						</p>
+					</div>
+				</div>
+				<div class="s-adv__item">
+					<img src="img/adv.svg" alt="icon" class="s-adv__item-icon" />
+					<div>
+						<h5 class="s-adv__item-title">Быстрый анализ</h5>
+						<p class="s-adv__item-content">
+							Равным образом новая модель организационной деятельности требуют
+						</p>
+					</div>
+				</div>
+				<div class="s-adv__item">
+					<img src="img/adv.svg" alt="icon" class="s-adv__item-icon" />
+					<div>
+						<h5 class="s-adv__item-title">Собственный транспорт</h5>
+						<p class="s-adv__item-content">
+							Значимость этих проблем настолько очевидна, что укрепление и
+							развитие структуры представляет собой
+						</p>
+					</div>
+				</div>
+				<div class="s-adv__item">
+					<img src="img/adv.svg" alt="icon" class="s-adv__item-icon" />
+					<div>
+						<h5 class="s-adv__item-title">Работа с организациями</h5>
+						<p class="s-adv__item-content">
+							Идейные соображения высшего порядка, а также консультация с широким
+							активом в значительной степени обуславливает создание
+						</p>
+					</div>
+				</div>
+				<div class="s-adv__item">
+					<img src="img/adv.svg" alt="icon" class="s-adv__item-icon" />
+					<div>
+						<h5 class="s-adv__item-title">Быстрый анализ</h5>
+						<p class="s-adv__item-content">
+							Равным образом новая модель организационной деятельности требуют
+						</p>
+					</div>
+				</div>
+				<div class="s-adv__item">
+					<img src="img/adv.svg" alt="icon" class="s-adv__item-icon" />
+					<div>
+						<h5 class="s-adv__item-title">Собственный транспорт</h5>
+						<p class="s-adv__item-content">
+							Значимость этих проблем настолько очевидна, что укрепление и
+							развитие структуры представляет собой
+						</p>
+					</div>
+				</div>
+			</div>
+			<img src="img/adv-img.jpg" alt="image" class="s-adv__img">
+		</section>
+
+		<section class="s-team sect-m">
+			<div class="container">
+				<div class="s-head">
+					<h2 class="s-title">Команда, которая работает с Вами</h2>
+					<div class="slider-nav">
+						<button class="slider-btn _prev">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow-line"></use>
+							</svg>
+						</button>
+						<button class="slider-btn _next">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow-line"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="swiper s-team__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide s-team__slide">
+							<div class="s-team__slide-gallery">
+								<img src="img/specialist.jpg" alt="image" class="s-team__slide-img" />
+							</div>
+							<div class="s-team__slide-body">
+								<h5 class="s-team__slide-title">Никитин Марк Денисович</h5>
+								<div class="s-team__slide-status">начальник пункта приёма</div>
+							</div>
+						</div>
+						<div class="swiper-slide s-team__slide">
+							<div class="s-team__slide-gallery">
+								<img src="img/specialist.jpg" alt="image" class="s-team__slide-img" />
+							</div>
+							<div class="s-team__slide-body">
+								<h5 class="s-team__slide-title">Волошин Матвей Максимович</h5>
+								<div class="s-team__slide-status">мастер-начальник смены</div>
+							</div>
+						</div>
+						<div class="swiper-slide s-team__slide">
+							<div class="s-team__slide-gallery">
+								<img src="img/specialist.jpg" alt="image" class="s-team__slide-img" />
+							</div>
+							<div class="s-team__slide-body">
+								<h5 class="s-team__slide-title">Никитин Марк Денисович</h5>
+								<div class="s-team__slide-status">начальник пункта приёма</div>
+							</div>
+						</div>
+						<div class="swiper-slide s-team__slide">
+							<div class="s-team__slide-gallery">
+								<img src="img/specialist.jpg" alt="image" class="s-team__slide-img" />
+							</div>
+							<div class="s-team__slide-body">
+								<h5 class="s-team__slide-title">Волошин Матвей Максимович</h5>
+								<div class="s-team__slide-status">мастер-начальник смены</div>
+							</div>
+						</div>
+						<div class="swiper-slide s-team__slide">
+							<div class="s-team__slide-gallery">
+								<img src="img/specialist.jpg" alt="image" class="s-team__slide-img" />
+							</div>
+							<div class="s-team__slide-body">
+								<h5 class="s-team__slide-title">Никитин Марк Денисович</h5>
+								<div class="s-team__slide-status">начальник пункта приёма</div>
+							</div>
+						</div>
+						<div class="swiper-slide s-team__slide">
+							<div class="s-team__slide-gallery">
+								<img src="img/specialist.jpg" alt="image" class="s-team__slide-img" />
+							</div>
+							<div class="s-team__slide-body">
+								<h5 class="s-team__slide-title">Волошин Матвей Максимович</h5>
+								<div class="s-team__slide-status">мастер-начальник смены</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="s-work sect-p">
+			<div class="container">
+				<h2 class="s-title">Как мы работаем</h2>
+				<div class="s-work__wrapper">
+					<div class="s-work__items">
+						<div class="s-work__item">
+							<div class="s-work__num">[1]</div>
+							<p class="s-work__content">
+								Вы звоните в любое время суток по номеру <a href="tel:+79534011166">+7 (953) 401-11-66</a>
+							</p>
+						</div>
+						<div class="s-work__item">
+							<div class="s-work__num">[2]</div>
+							<p class="s-work__content">
+								Вы приезжаете или мы едем к вам сами. Выбор более чем 4 точки в городе Казань
+							</p>
+						</div>
+						<div class="s-work__item">
+							<div class="s-work__num">[3]</div>
+							<p class="s-work__content">
+								Производим расчет сразу. Оплата в любой форме (нал/безнал)
+							</p>
+						</div>
+					</div>
+					<div class="s-work__form-wrapper">
+						<div class="s-work__form-head">
+							<img src="img/figure-black.svg" alt="icon">
+							<span>Оставьте заявку</span>
+						</div>
+						<form action="#" class="s-work__form">
+							<div class="s-work__form-item">
+								<input type="text" placeholder="Имя" class="input _white">
+							</div>
+							<div class="s-work__form-item">
+								<input type="tel" placeholder="Телефон" class="input _white">
+							</div>
+							<button class="button">Отправить</button>
+						</form>
+						<p class="s-work__form-policy">Нажимая “Отправить”, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+	<footer class="footer">
+		<div class="container">
+		</div>
+	</footer>
+
+	<script src="./files/js/inputmask.min.js?_v=20250417130504"></script>
+	<script src="./files/js/swiper.min.js?_v=20250417130504"></script>
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU&_v=20250417130504" type="text/javascript"></script>
+	<script src="js/app.min.js?_v=20250417130504"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+.s-adv {
+  position: relative;
+  padding-bottom: 170px;
+  @include laptop-min {
+    padding-bottom: 0;
+  }
+  &__title {
+    margin: 0;
+    max-width: 400px;
+  }
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include laptop {
+      position: static;
+      transform: translateX(0);
+      margin-bottom: 20px !important;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    padding: 50px;
+    width: 960px;
+    max-width: 100%;
+    margin-left: auto;
+    @include laptop-min {
+      width: 100%;
+      padding: 30px 15px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: start;
+    gap: 30px;
+    @include tablet-min {
+      gap: 20px;
+    }
+  }
+  &__item-icon {
+    width: 50px;
+    flex-shrink: 0;
+    @include tablet-min {
+      width: 35px;
+    }
+  }
+  &__item-title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 140%;
+    margin: 0px 0px 10px 0px;
+    @include tablet-min {
+      font-size: 18px;
+    }
+  }
+  &__item-content {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 140%;
+    margin: 0;
+    @include tablet-min {
+      font-size: 16px;
+    }
+  }
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1200px;
+    z-index: -1;
+    @include laptop-min {
+      position: static;
+      height: 450px;
+      object-fit: cover;
+    }
+    @include tablet {
+      height: 400px;
+    }
+    @include tablet-min {
+      height: 350px;
+    }
+  }
+}

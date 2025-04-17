@@ -10,6 +10,9 @@
 @import "./ui/button";
 @import "./ui/list";
 @import "./ui/sect";
+@import "./ui/title";
+@import "./ui/form";
+@import "./ui/slider";
 
 // widgets
 @import "./widgets/burger";
@@ -20,5 +23,10 @@
 @import "./components/hero";
 @import "./components/s-address";
 @import "./components/s-offer";
+@import "./components/s-why";
+@import "./components/s-prices";
+@import "./components/s-adv";
+@import "./components/s-team";
+@import "./components/s-work";
 
 @import "./components/footer";
