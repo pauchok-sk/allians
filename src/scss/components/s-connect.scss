@@ -1,0 +1,36 @@
+.s-connect {
+  padding: 34px 0px;
+  background-color: var(--red);
+  color: white;
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    row-gap: 40px;
+    @include laptop-middle {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 180px;
+  }
+  &__info {
+    flex: 1;
+  }
+  &__info-title {
+    margin-bottom: 20px !important;
+  }
+  &__content {
+    font-size: 20px;
+    line-height: 120%;
+    margin: 0;
+  }
+  &__btn {
+    width: 300px;
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

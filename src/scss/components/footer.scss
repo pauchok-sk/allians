@@ -1,0 +1,206 @@
+.footer {
+  padding: 70px 0px;
+  background-color: var(--black);
+  color: white;
+  @include laptop-min {
+    padding: 50px 0px;
+  }
+  @include tablet {
+    padding: 40px 0px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    row-gap: 50px;
+    @include laptop-middle {
+      flex-wrap: wrap;
+    }
+  }
+  &__contacts {
+    max-width: 300px;
+    @include laptop-middle {
+      order: 2;
+    }
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      text-align: center;
+      max-width: none;
+      width: 100%;
+    }
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 140%;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin: 0px 0px 25px 0px;
+  }
+  &__contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    li {
+      font-size: 18px;
+      line-height: 140%;
+      opacity: 0.7;
+    }
+  }
+  &__contacts-connect {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  &__tel {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 140%;
+    color: var(--red);
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.6;
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 20px;
+  }
+  &__social-btn {
+    display: block;
+    width: 28px;
+    height: 28px;
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.6;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__mail {
+    display: block;
+    width: fit-content;
+    margin-top: 20px;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 1;
+    }
+  }
+  &__nav {
+    display: flex;
+    gap: 30px;
+    flex: 0 1 715px;
+    @include laptop-middle {
+      order: 3;
+    }
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__nav-item {
+    flex: 1;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include tablet {
+      text-align: center;
+      align-items: center;
+    }
+
+    a {
+      display: block;
+      width: fit-content;
+      font-size: 18px;
+      line-height: 140%;
+      transition: opacity 0.2s ease;
+      @include hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 275px;
+    height: auto;
+    @include laptop-middle {
+      order: 1;
+    }
+    @include tablet {
+      align-items: center;
+      text-align: center;
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 240px;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__main-bottom {
+    padding-top: 30px;
+    margin-top: auto;
+
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.5);
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      margin-top: 0;
+      padding-top: 0;
+      order: 4;
+    }
+  
+    a {
+      display: block;
+      width: fit-content;
+      transition: color .2s ease;
+      @include hover {
+        color: white;
+      }
+    }
+  }
+  &__main-content {
+    margin: 0px 0px 10px 0px;
+  }
+  &__dev {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include tablet {
+      justify-content: center;
+    }
+  }
+}
