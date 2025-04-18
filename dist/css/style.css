@@ -209,8 +209,13 @@ body {
   font-weight: 600;
   line-height: 140%
 }
+.btn-arrow._black-rect div {
+  background-color: var(--black);
+  color: #fff
+}
 .btn-arrow span {
   display: block;
+  text-align: center;
   padding: 20px 36px;
   background-color: var(--red);
   border-radius: 4px;
@@ -225,6 +230,7 @@ body {
   width: 65px;
   height: auto;
   border-radius: 4px;
+  flex-shrink: 0;
   background-color: #fff;
   color: #000;
   transition: background-color .2s ease,color .2s ease
@@ -248,6 +254,24 @@ body {
   font-weight: 600;
   line-height: 140%;
   transition: background-color .2s ease
+}
+.btn-rect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: var(--black);
+  color: #fff;
+  transition: color .2s ease,background-color .2s ease
+}
+.btn-rect._red {
+  background-color: var(--red)
+}
+.btn-rect svg {
+  width: 32px;
+  height: 32px
 }
 .list {
   padding-left: 0;
@@ -1202,6 +1226,137 @@ textarea.input {
 .s-work__form-policy a {
   font-weight: 700
 }
+.s-contacts-info__container {
+  display: flex;
+  gap: 60px
+}
+.s-contacts-info__body {
+  width: 500px;
+  flex-shrink: 0;
+  padding: 50px;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.03)
+}
+.s-contacts-info__social {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px
+}
+.s-contacts-info__tel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 140%
+}
+.s-contacts-info__tel span {
+  transition: opacity .2s ease
+}
+.s-contacts-info__tel svg {
+  width: 32px;
+  height: 32px;
+  color: var(--red)
+}
+.s-contacts-info__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px
+}
+.s-contacts-info__list li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 140%
+}
+.s-contacts-info__list li a {
+  font-weight: 500;
+  transition: opacity .2s ease
+}
+.s-contacts-info__list li svg {
+  color: var(--red);
+  width: 32px;
+  height: 32px
+}
+.s-contacts-info__btn {
+  width: 100%
+}
+.s-contacts-info__btn span {
+  padding-left: 15px!important;
+  padding-right: 15px!important
+}
+.s-contacts-info__gallery {
+  flex: 1;
+  overflow: hidden
+}
+.s-contacts-info__slider {
+  height: 520px!important;
+  border-radius: 4px
+}
+.s-contacts-info__slider-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.7);
+  z-index: 10;
+  transition: background-color .2s ease
+}
+.s-contacts-info__slider-btn.swiper-button-disabled {
+  pointer-events: none;
+  background-color: rgba(0,0,0,.5)
+}
+.s-contacts-info__slider-btn._prev {
+  left: 0
+}
+.s-contacts-info__slider-btn._next {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  right: 0
+}
+.s-contacts-info__slider-btn svg {
+  width: 28px;
+  height: 28px
+}
+.s-contacts-info__slide {
+  height: 520px!important
+}
+.s-contacts-info__slide-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.s-contacts-info__thumb-slider {
+  margin-top: 20px
+}
+.s-contacts-info__thumb-slide {
+  border-radius: 4px;
+  cursor: pointer;
+  height: 150px!important
+}
+.s-contacts-info__thumb-slide.swiper-slide-thumb-active::before {
+  opacity: 1
+}
+.s-contacts-info__thumb-slide::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  border-radius: 4px;
+  border: 3px solid var(--black);
+  opacity: 0;
+  transition: opacity .2s ease
+}
 @media (min-width:768px) {
   .s-prices__form-policy._mobile {
     display: none
@@ -1264,6 +1419,17 @@ textarea.input {
   .s-work__form-wrapper {
     width: 100%
   }
+  .s-contacts-info__container {
+    gap: 30px
+  }
+  .s-contacts-info__body {
+    width: 420px;
+    padding: 25px
+  }
+  .s-contacts-info__thumb-slide {
+    aspect-ratio: 1/1;
+    height: auto!important
+  }
 }
 @media (max-width:1199px) {
   .header__social {
@@ -1306,6 +1472,9 @@ textarea.input {
   .s-prices__spoller-list {
     gap: 30px;
     padding: 30px
+  }
+  .s-contacts-info__slider {
+    height: 440px!important
   }
 }
 @media (max-width:1199px)and (max-width:992px) {
@@ -1422,6 +1591,12 @@ textarea.input {
   .s-work__content {
     font-size: 18px
   }
+  .s-contacts-info__container {
+    flex-wrap: wrap
+  }
+  .s-contacts-info__body {
+    width: 100%
+  }
 }
 @media (max-width:767px) {
   .sect-p {
@@ -1527,6 +1702,11 @@ textarea.input {
   .s-work__form-wrapper {
     padding: 25px
   }
+  .s-contacts-info__list {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    gap: 20px
+  }
 }
 @media (max-width:575px) {
   .slider-nav {
@@ -1573,6 +1753,22 @@ textarea.input {
   .s-adv__img {
     height: 350px
   }
+  .s-contacts-info__tel {
+    font-size: 24px
+  }
+  .s-contacts-info__list li {
+    font-size: 16px;
+    gap: 16px
+  }
+  .s-contacts-info__slider {
+    height: auto!important;
+    aspect-ratio: 1/1
+  }
+}
+@media (max-width:480px) {
+  .s-contacts-info__body {
+    padding: 25px 15px
+  }
 }
 @media (any-hover:hover) {
   .btn-arrow:hover span {
@@ -1584,6 +1780,12 @@ textarea.input {
   }
   .button:hover {
     background-color: var(--shaft)
+  }
+  .btn-rect:hover {
+    background-color: var(--red)
+  }
+  .btn-rect._red:hover {
+    background-color: var(--thunder)
   }
   .slider-btn:hover {
     opacity: .7
@@ -1648,6 +1850,18 @@ textarea.input {
   .s-work__form-policy a:hover {
     text-decoration: underline
   }
+  .s-contacts-info__tel:hover span {
+    opacity: .6
+  }
+  .s-contacts-info__list li a:hover {
+    opacity: .6
+  }
+  .s-contacts-info__slider-btn:hover {
+    background-color: #000
+  }
+  .s-contacts-info__thumb-slide:hover::before {
+    opacity: .5
+  }
 }
 @media (hover:none) {
   .btn-arrow:active span {
@@ -1659,6 +1873,12 @@ textarea.input {
   }
   .button:active {
     background-color: var(--shaft)
+  }
+  .btn-rect:active {
+    background-color: var(--red)
+  }
+  .btn-rect._red:active {
+    background-color: var(--thunder)
   }
   .slider-btn:active {
     opacity: .7
@@ -1722,5 +1942,17 @@ textarea.input {
   }
   .s-work__form-policy a:active {
     text-decoration: underline
+  }
+  .s-contacts-info__tel:active span {
+    opacity: .6
+  }
+  .s-contacts-info__list li a:active {
+    opacity: .6
+  }
+  .s-contacts-info__slider-btn:active {
+    background-color: #000
+  }
+  .s-contacts-info__thumb-slide:active::before {
+    opacity: .5
   }
 }

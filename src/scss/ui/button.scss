@@ -19,6 +19,13 @@
   font-weight: 600;
   line-height: 140%;
 
+  &._black-rect {
+    div {
+      background-color: var(--black);
+      color: white;
+    }
+  }
+
   @include hover {
     span {
       background-color: var(--thunder);
@@ -31,6 +38,7 @@
 
   span {
     display: block;
+    text-align: center;
     padding: 20px 36px;
     background-color: var(--red);
     border-radius: 4px;
@@ -46,6 +54,7 @@
     width: 65px;
     height: auto;
     border-radius: 4px;
+    flex-shrink: 0;
     background-color: white;
     color: black;
     transition:
@@ -72,8 +81,34 @@
   font-size: 18px;
   font-weight: 600;
   line-height: 140%;
-  transition: background-color .2s ease;
+  transition: background-color 0.2s ease;
   @include hover {
     background-color: var(--shaft);
+  }
+}
+
+.btn-rect {
+  @include flex-center;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: var(--black);
+  color: white;
+  transition: color .2s ease, background-color .2s ease;
+
+  @include hover {
+    background-color: var(--red);
+  }
+
+  &._red {
+    background-color: var(--red);
+    @include hover {
+      background-color: var(--thunder);
+    }
+  }
+
+  svg {
+    width: 32px;
+    height: 32px;
   }
 }

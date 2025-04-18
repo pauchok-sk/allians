@@ -10,3 +10,5 @@ burger();
 map();
 sliders();
 inputmask();
+
+Fancybox.bind("[data-fancybox]")
