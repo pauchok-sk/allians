@@ -270,6 +270,10 @@ body {
 .btn-rect._red {
   background-color: var(--red)
 }
+.btn-rect._white {
+  background-color: #fff;
+  color: var(--black)
+}
 .btn-rect svg {
   width: 32px;
   height: 32px
@@ -285,6 +289,12 @@ body {
 .sect-m {
   margin: 100px 0
 }
+.sect-m-min {
+  margin: 50px 0
+}
+.sect-m-min-top {
+  padding: 50px 0 100px 0
+}
 .s-head {
   display: flex;
   align-items: center;
@@ -294,6 +304,12 @@ body {
 }
 .s-head .s-title {
   margin: 0!important
+}
+.main-title {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0 0 50px 0
 }
 .s-title {
   font-size: 50px;
@@ -378,6 +394,41 @@ textarea.input {
 .slider-btn svg {
   width: 22px;
   height: 22px
+}
+.breadcrumbs {
+  padding: 20px 0;
+  background-color: #fff
+}
+.breadcrumbs .aioseo-breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px
+}
+.breadcrumbs .aioseo-breadcrumb {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  line-height: 140%
+}
+.breadcrumbs .aioseo-breadcrumb:last-child {
+  opacity: .5
+}
+.breadcrumbs .aioseo-breadcrumb a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color .2s ease
+}
+.breadcrumbs .aioseo-breadcrumb a::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 1px;
+  background-color: var(--red)
 }
 .burger-overlay {
   position: fixed;
@@ -570,6 +621,68 @@ textarea.input {
 }
 .modal__form-content a {
   text-decoration: underline
+}
+.communication {
+  padding: 60px 70px;
+  background-color: var(--black);
+  color: #fff
+}
+.communication__title {
+  position: relative;
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 140%;
+  margin: 0 0 30px 0
+}
+.communication__title::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 25px;
+  top: 0;
+  left: -35px;
+  background: url(../img/figure.svg) 0 0/100% auto no-repeat
+}
+.communication__body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 120px;
+  row-gap: 40px
+}
+.communication__item {
+  display: flex;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 30px
+}
+.communication__item-num {
+  font-size: 50px;
+  line-height: 110%;
+  letter-spacing: 5px;
+  color: var(--red)
+}
+.communication__item-title {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 140%;
+  margin-bottom: 16px
+}
+.communication__item-tel {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 140%;
+  transition: opacity .2s ease
+}
+.communication__social {
+  display: flex;
+  gap: 20px
+}
+.communication__social .btn-rect {
+  width: 65px!important;
+  height: 65px!important
 }
 .header {
   background-color: var(--black);
@@ -1446,6 +1559,128 @@ textarea.input {
 .s-connect__btn {
   width: 300px
 }
+.s-price__list {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 120px;
+  row-gap: 20px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 4px
+}
+.s-price__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 140%;
+  padding-top: 20px;
+  border-top: 1px solid var(--gallery)
+}
+.s-price__list-item:nth-child(-n+2) {
+  border-top: none;
+  padding-top: 0
+}
+.s-price__content {
+  margin-top: 100px
+}
+.s-price__content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 40px
+}
+.s-price__content-item {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 140%
+}
+.s-price__content-item p {
+  margin: 0
+}
+.s-price__content-item p:not(:last-child) {
+  margin-bottom: 20px
+}
+.s-catalog {
+  position: relative;
+  background-color: var(--thunder);
+  color: #fff;
+  z-index: 1
+}
+.s-catalog::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 545px;
+  clip-path: polygon(35% 0,100% 0,100% 100%,0 100%);
+  background-color: var(--red);
+  z-index: -1
+}
+.s-catalog__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 40px
+}
+.s-catalog__item {
+  position: relative;
+  display: flex;
+  align-items: end;
+  border-radius: 4px;
+  background-color: #fff;
+  color: var(--black);
+  min-height: 260px;
+  z-index: 1;
+  transition: color .2s ease,background-color .2s ease
+}
+.s-catalog__item-rect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 4px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  color: var(--black)
+}
+.s-catalog__item-rect svg {
+  width: 16px;
+  height: 16px;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease,-webkit-transform .2s ease
+}
+.s-catalog__item-body {
+  padding: 40px
+}
+.s-catalog__item-title {
+  margin: 0 0 10px 0
+}
+.s-catalog__item-descr {
+  font-size: 18px;
+  line-height: 140%
+}
+.s-catalog__item-img {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 4px;
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity .2s ease
+}
 .footer {
   padding: 70px 0;
   background-color: var(--black);
@@ -1653,6 +1888,12 @@ textarea.input {
     aspect-ratio: 1/1;
     height: auto!important
   }
+  .s-catalog__wrapper {
+    gap: 30px
+  }
+  .s-catalog__item-body {
+    padding: 20px
+  }
 }
 @media (max-width:1199px) {
   .header__social {
@@ -1703,6 +1944,13 @@ textarea.input {
     flex-direction: column;
     text-align: center
   }
+  .s-price__list {
+    gap: 80px;
+    row-gap: 20px
+  }
+  .s-catalog__wrapper {
+    grid-template-columns: repeat(2,1fr)
+  }
   .footer__container {
     flex-wrap: wrap
   }
@@ -1733,6 +1981,12 @@ textarea.input {
   .sect-m {
     margin: 80px 0
   }
+  .sect-m-min-top {
+    padding: 50px 0 80px 0
+  }
+  .main-title {
+    font-size: 48px
+  }
   .s-title {
     font-size: 38px
   }
@@ -1741,6 +1995,28 @@ textarea.input {
   }
   .burger {
     display: flex
+  }
+  .communication {
+    padding: 40px 60px
+  }
+  .communication__title {
+    font-size: 28px
+  }
+  .communication__body {
+    gap: 40px
+  }
+  .communication__item {
+    gap: 20px
+  }
+  .communication__item-num {
+    font-size: 42px
+  }
+  .communication__item-tel {
+    font-size: 26px
+  }
+  .communication__social .btn-rect {
+    width: 50px!important;
+    height: 50px!important
   }
   .header__container {
     display: flex;
@@ -1836,6 +2112,19 @@ textarea.input {
   .s-contacts-info__body {
     width: 100%
   }
+  .s-price__list {
+    gap: 40px;
+    row-gap: 20px
+  }
+  .s-price__content {
+    margin-top: 80px
+  }
+  .s-price__content-item {
+    grid-column: 2 span
+  }
+  .s-catalog__item {
+    min-height: 200px
+  }
   .footer {
     padding: 50px 0
   }
@@ -1847,7 +2136,17 @@ textarea.input {
   .sect-m {
     margin: 60px 0
   }
+  .sect-m-min {
+    margin: 40px 0
+  }
+  .sect-m-min-top {
+    padding: 40px 0 60px 0
+  }
   .s-head {
+    margin-bottom: 30px
+  }
+  .main-title {
+    font-size: 36px;
     margin-bottom: 30px
   }
   .s-title {
@@ -1867,6 +2166,12 @@ textarea.input {
   .slider-btn svg {
     width: 18px;
     height: 18px
+  }
+  .communication__title {
+    font-size: 24px
+  }
+  .communication__item-num {
+    font-size: 34px
   }
   .header {
     padding: 18px 0
@@ -1949,6 +2254,28 @@ textarea.input {
     margin-top: 20px;
     gap: 20px
   }
+  .s-price__list {
+    gap: 20px
+  }
+  .s-price__list-item {
+    grid-column: 2 span
+  }
+  .s-price__list-item:nth-child(2) {
+    border-top: 1px solid var(--gallery);
+    padding-top: 20px
+  }
+  .s-price__content {
+    margin-top: 60px
+  }
+  .s-price__content-wrapper {
+    gap: 30px
+  }
+  .s-catalog::after {
+    width: 50%
+  }
+  .s-catalog__item {
+    grid-column: 2 span
+  }
   .footer {
     padding: 40px 0
   }
@@ -1995,6 +2322,18 @@ textarea.input {
   }
   .modal {
     padding: 20px 15px!important
+  }
+  .communication {
+    padding: 30px 20px
+  }
+  .communication__title {
+    padding-left: 35px
+  }
+  .communication__title::before {
+    left: 0
+  }
+  .communication__item-tel {
+    font-size: 24px
   }
   .header__logo {
     width: 160px
@@ -2048,13 +2387,29 @@ textarea.input {
     height: auto!important;
     aspect-ratio: 1/1
   }
+  .s-price__list {
+    padding: 25px 20px
+  }
 }
 @media (max-width:480px) {
+  .communication__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%
+  }
+  .communication__item:not(:last-child) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff
+  }
   .s-contacts-info__body {
     padding: 25px 15px
   }
   .s-connect__btn {
     width: 100%
+  }
+  .s-catalog::after {
+    width: 80%
   }
 }
 @media (any-hover:hover) {
@@ -2074,8 +2429,15 @@ textarea.input {
   .btn-rect._red:hover {
     background-color: var(--thunder)
   }
+  .btn-rect._white:hover {
+    background-color: var(--thunder);
+    color: #fff
+  }
   .slider-btn:hover {
     opacity: .7
+  }
+  .breadcrumbs .aioseo-breadcrumb a:hover {
+    color: var(--red)
   }
   .burger__list a:hover {
     opacity: .5
@@ -2092,6 +2454,9 @@ textarea.input {
   }
   .modal__form-content a:hover {
     text-decoration: none
+  }
+  .communication__item-tel:hover {
+    opacity: .5
   }
   .header__list a:hover {
     opacity: 1
@@ -2155,6 +2520,16 @@ textarea.input {
   .s-contacts-info__thumb-slide:hover::before {
     opacity: .5
   }
+  .s-catalog__item:hover {
+    color: #fff
+  }
+  .s-catalog__item:hover .s-catalog__item-rect svg {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+  }
+  .s-catalog__item:hover .s-catalog__item-img {
+    opacity: 1
+  }
   .footer__tel:hover {
     opacity: .6
   }
@@ -2188,8 +2563,15 @@ textarea.input {
   .btn-rect._red:active {
     background-color: var(--thunder)
   }
+  .btn-rect._white:active {
+    background-color: var(--thunder);
+    color: #fff
+  }
   .slider-btn:active {
     opacity: .7
+  }
+  .breadcrumbs .aioseo-breadcrumb a:active {
+    color: var(--red)
   }
   .burger__list a:active {
     opacity: .5
@@ -2206,6 +2588,9 @@ textarea.input {
   }
   .modal__form-content a:active {
     text-decoration: none
+  }
+  .communication__item-tel:active {
+    opacity: .5
   }
   .header__list a:active {
     opacity: 1
@@ -2268,6 +2653,16 @@ textarea.input {
   }
   .s-contacts-info__thumb-slide:active::before {
     opacity: .5
+  }
+  .s-catalog__item:active {
+    color: #fff
+  }
+  .s-catalog__item:active .s-catalog__item-rect svg {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+  }
+  .s-catalog__item:active .s-catalog__item-img {
+    opacity: 1
   }
   .footer__tel:active {
     opacity: .6

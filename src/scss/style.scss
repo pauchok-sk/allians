@@ -13,10 +13,12 @@
 @import "./ui/title";
 @import "./ui/form";
 @import "./ui/slider";
+@import "./ui/breadcrumbs";
 
 // widgets
 @import "./widgets/burger";
 @import "./widgets/modal";
+@import "./widgets/communication";
 
 // components
 @import "./components/header";
@@ -31,5 +33,7 @@
 @import "./components/s-work";
 @import "./components/s-contacts-info";
 @import "./components/s-connect";
+@import "./components/s-price";
+@import "./components/s-catalog";
 
 @import "./components/footer";

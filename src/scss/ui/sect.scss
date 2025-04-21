@@ -18,6 +18,22 @@
   }
 }
 
+.sect-m-min {
+  margin: 50px 0px;
+  @include tablet {
+    margin: 40px 0px;
+  }
+}
+.sect-m-min-top {
+  padding: 50px 0px 100px 0px;
+  @include laptop-min {
+    padding: 50px 0px 80px 0px;
+  }
+  @include tablet {
+    padding: 40px 0px 60px 0px;
+  }
+}
+
 .s-head {
   @include flex-between;
   gap: 20px;

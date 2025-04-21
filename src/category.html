@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body class="body">
+    @@include('html/components/header.html')
+    <main>
+      <div class="breadcrumbs">
+        <div class="container">
+          <div class="aioseo-breadcrumbs">
+            <span class="aioseo-breadcrumb">
+              <a href="/" title="Главная">Главная</a>
+            </span>
+            <span class="aioseo-breadcrumb"> Черные металлы </span>
+          </div>
+        </div>
+      </div>
+
+      @@include('html/components/s-price.html')
+      @@include('html/components/s-catalog.html')
+      @@include('html/components/s-adv.html')
+      @@include('html/components/s-contacts-info.html')
+      @@include('html/components/s-connect.html')
+      
+    </main>
+    @@include('html/components/footer.html')
+    @@include('html/components/modals.html')
+
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

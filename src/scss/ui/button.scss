@@ -107,6 +107,14 @@
       background-color: var(--thunder);
     }
   }
+  &._white {
+    background-color: white;
+    color: var(--black);
+    @include hover {
+      background-color: var(--thunder);
+      color: white;
+    }
+  }
 
   svg {
     width: 32px;
