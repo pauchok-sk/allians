@@ -1,0 +1,18 @@
+.s-single {
+  &__content {
+    margin-bottom: 50px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  .communication {
+    margin-bottom: 100px;
+    @include laptop-min {
+      margin-bottom: 80px;
+    }
+    @include tablet {
+      margin-bottom: 60px;
+    }
+  }
+}

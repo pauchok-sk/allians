@@ -14,6 +14,8 @@
 @import "./ui/form";
 @import "./ui/slider";
 @import "./ui/breadcrumbs";
+@import "./ui/price-list";
+@import "./ui/content";
 
 // widgets
 @import "./widgets/burger";
@@ -35,5 +37,6 @@
 @import "./components/s-connect";
 @import "./components/s-price";
 @import "./components/s-catalog";
+@import "./components/s-single";
 
 @import "./components/footer";

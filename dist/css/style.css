@@ -430,6 +430,42 @@ textarea.input {
   border-radius: 1px;
   background-color: var(--red)
 }
+.price-list {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 120px;
+  row-gap: 20px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 4px
+}
+.price-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 140%;
+  padding-top: 20px;
+  border-top: 1px solid var(--gallery)
+}
+.price-list__item:nth-child(-n+2) {
+  border-top: none;
+  padding-top: 0
+}
+.content {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 140%
+}
+.content p {
+  margin: 0
+}
+.content p:not(:last-child) {
+  margin-bottom: 20px
+}
 .burger-overlay {
   position: fixed;
   inset: 0;
@@ -625,6 +661,7 @@ textarea.input {
 .communication {
   padding: 60px 70px;
   background-color: var(--black);
+  border-radius: 4px;
   color: #fff
 }
 .communication__title {
@@ -932,6 +969,9 @@ textarea.input {
   gap: 15px;
   font-size: 18px;
   line-height: 140%
+}
+.s-address__head._start {
+  margin-left: 0!important
 }
 .s-address__head svg {
   width: 20px;
@@ -1560,29 +1600,7 @@ textarea.input {
   width: 300px
 }
 .s-price__list {
-  padding: 40px;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 120px;
-  row-gap: 20px;
-  padding: 40px;
-  background-color: #fff;
-  border-radius: 4px
-}
-.s-price__list-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 140%;
-  padding-top: 20px;
-  border-top: 1px solid var(--gallery)
-}
-.s-price__list-item:nth-child(-n+2) {
-  border-top: none;
-  padding-top: 0
+  margin-bottom: 50px
 }
 .s-price__content {
   margin-top: 100px
@@ -1680,6 +1698,12 @@ textarea.input {
   opacity: 0;
   z-index: -1;
   transition: opacity .2s ease
+}
+.s-single__content {
+  margin-bottom: 50px
+}
+.s-single .communication {
+  margin-bottom: 100px
 }
 .footer {
   padding: 70px 0;
@@ -1896,6 +1920,10 @@ textarea.input {
   }
 }
 @media (max-width:1199px) {
+  .price-list {
+    gap: 80px;
+    row-gap: 20px
+  }
   .header__social {
     display: none
   }
@@ -1944,10 +1972,6 @@ textarea.input {
     flex-direction: column;
     text-align: center
   }
-  .s-price__list {
-    gap: 80px;
-    row-gap: 20px
-  }
   .s-catalog__wrapper {
     grid-template-columns: repeat(2,1fr)
   }
@@ -1992,6 +2016,10 @@ textarea.input {
   }
   .t-title {
     font-size: 28px
+  }
+  .price-list {
+    gap: 40px;
+    row-gap: 20px
   }
   .burger {
     display: flex
@@ -2112,10 +2140,6 @@ textarea.input {
   .s-contacts-info__body {
     width: 100%
   }
-  .s-price__list {
-    gap: 40px;
-    row-gap: 20px
-  }
   .s-price__content {
     margin-top: 80px
   }
@@ -2124,6 +2148,9 @@ textarea.input {
   }
   .s-catalog__item {
     min-height: 200px
+  }
+  .s-single .communication {
+    margin-bottom: 80px
   }
   .footer {
     padding: 50px 0
@@ -2166,6 +2193,16 @@ textarea.input {
   .slider-btn svg {
     width: 18px;
     height: 18px
+  }
+  .price-list {
+    gap: 20px
+  }
+  .price-list__item {
+    grid-column: 2 span
+  }
+  .price-list__item:nth-child(2) {
+    border-top: 1px solid var(--gallery);
+    padding-top: 20px
   }
   .communication__title {
     font-size: 24px
@@ -2255,14 +2292,7 @@ textarea.input {
     gap: 20px
   }
   .s-price__list {
-    gap: 20px
-  }
-  .s-price__list-item {
-    grid-column: 2 span
-  }
-  .s-price__list-item:nth-child(2) {
-    border-top: 1px solid var(--gallery);
-    padding-top: 20px
+    margin-bottom: 30px
   }
   .s-price__content {
     margin-top: 60px
@@ -2275,6 +2305,12 @@ textarea.input {
   }
   .s-catalog__item {
     grid-column: 2 span
+  }
+  .s-single__content {
+    margin-bottom: 30px
+  }
+  .s-single .communication {
+    margin-bottom: 60px
   }
   .footer {
     padding: 40px 0
@@ -2319,6 +2355,9 @@ textarea.input {
 @media (max-width:575px) {
   .slider-nav {
     display: none
+  }
+  .price-list {
+    padding: 25px 20px
   }
   .modal {
     padding: 20px 15px!important
@@ -2386,9 +2425,6 @@ textarea.input {
   .s-contacts-info__slider {
     height: auto!important;
     aspect-ratio: 1/1
-  }
-  .s-price__list {
-    padding: 25px 20px
   }
 }
 @media (max-width:480px) {

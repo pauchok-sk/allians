@@ -1,6 +1,7 @@
 .communication {
   padding: 60px 70px;
   background-color: var(--black);
+  border-radius: 4px;
   color: white;
   @include laptop-min {
     padding: 40px 60px;
