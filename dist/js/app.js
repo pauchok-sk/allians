@@ -223,6 +223,9 @@
             new Swiper(contactsInfoSlider, {
                 speed: 700,
                 spaceBetween: 20,
+                autoplay: {
+                    delay: 3500
+                },
                 navigation: {
                     prevEl: ".s-contacts-info__slider-btn._prev",
                     nextEl: ".s-contacts-info__slider-btn._next"
@@ -231,6 +234,33 @@
                     swiper: sliderThumb
                 },
                 breakpoints: {}
+            });
+        }
+        const processSlider = document.querySelector(".s-process__slider");
+        if (processSlider) {
+            new Swiper(processSlider, {
+                speed: 700,
+                spaceBetween: 20,
+                slidesPerView: "auto",
+                autoplay: {
+                    delay: 2500
+                },
+                centeredSlides: true,
+                initialSlide: 2,
+                navigation: {
+                    prevEl: ".s-process .slider-btn._prev",
+                    nextEl: ".s-process .slider-btn._next"
+                },
+                scrollbar: {
+                    el: ".s-process .slider-scrollbar",
+                    draggable: true
+                },
+                breakpoints: {
+                    768: {
+                        spaceBetween: 30,
+                        slidesPerView: "auto"
+                    }
+                }
             });
         }
     }

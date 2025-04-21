@@ -27,6 +27,10 @@
       width: 100%;
       margin-bottom: 30px;
     }
+
+    &._start {
+      margin-left: 0 !important;
+    }
   }
   &__head {
     padding: 25px 40px;
@@ -42,10 +46,6 @@
 
     @include tablet-min {
       padding: 15px 25px;
-    }
-
-    &._start {
-      margin-left: 0 !important;
     }
 
     svg {

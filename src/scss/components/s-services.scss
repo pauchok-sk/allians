@@ -1,0 +1,69 @@
+.s-services {
+  position: relative;
+  background-color: var(--thunder);
+  color: white;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 655px;
+    background-color: var(--red);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: -1;
+    @include laptop-min {
+      width: 50%;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: end;
+    min-height: 350px;
+    border-radius: 4px;
+    background-color: white;
+    z-index: 1;
+    @include laptop {
+      min-height: 260px;
+    }
+    @include tablet {
+      grid-column: 2 span;
+    }
+  }
+  &__item-img {
+    position: absolute;
+    display: block;
+    top: 2px;
+    left: 2px;
+    object-fit: cover;
+    border-radius: 4px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    filter: brightness(50%);
+    z-index: -1;
+  }
+  &__item-body {
+    padding: 40px;
+    @include laptop {
+      padding: 20px;
+    }
+  }
+  &__item-title {
+    margin: 0px 0px 10px 0px;
+  }
+  &__item-descr {
+    font-size: 18px;
+    line-height: 140%;
+  }
+}

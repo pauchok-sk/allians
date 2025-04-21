@@ -46,3 +46,28 @@
     }
   }
 }
+
+.slider-scrollbar {
+  background: rgba(0, 0, 0, 0.10);
+  height: 1px;
+  margin-top: 50px;
+  @include tablet {
+    margin-top: 30px;
+  }
+
+  .swiper-scrollbar-drag {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 3px;
+      right: 0;
+      left: 0;
+      background-color: var(--black);
+    }
+  }
+}
