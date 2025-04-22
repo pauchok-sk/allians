@@ -1,0 +1,31 @@
+.s-benefit {
+  padding: 70px 0px;
+  background-color: white;
+  @include laptop-min {
+    padding: 50px 0px;
+  }
+  &__slider {
+  }
+  &__slide {
+    display: flex !important;
+    align-items: center;
+    gap: 30px;
+    width: fit-content !important;
+
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 140%;
+
+    @include tablet {
+      font-size: 18px;
+      gap: 20px;
+    }
+  }
+  &__slide-icon {
+    width: 70px;
+    display: block;
+    @include tablet {
+      width: 50px;
+    }
+  }
+}

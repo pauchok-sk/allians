@@ -99,11 +99,31 @@ export default function sliders() {
       },
       scrollbar: {
         el: ".s-process .slider-scrollbar",
-        draggable: true
+        draggable: true,
       },
       breakpoints: {
         768: {
           spaceBetween: 30,
+          slidesPerView: "auto",
+        },
+      },
+    });
+  }
+  const benfitSlider = document.querySelector(".s-benefit__slider");
+
+  if (benfitSlider) {
+    const slider = new Swiper(benfitSlider, {
+      speed: 700,
+      spaceBetween: 30,
+      slidesPerView: "auto",
+      grabCursor: true,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+      },
+      breakpoints: {
+        768: {
+          spaceBetween: 60,
           slidesPerView: "auto",
         }
       }

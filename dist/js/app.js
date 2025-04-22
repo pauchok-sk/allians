@@ -263,6 +263,25 @@
                 }
             });
         }
+        const benfitSlider = document.querySelector(".s-benefit__slider");
+        if (benfitSlider) {
+            new Swiper(benfitSlider, {
+                speed: 700,
+                spaceBetween: 30,
+                slidesPerView: "auto",
+                grabCursor: true,
+                loop: true,
+                autoplay: {
+                    delay: 2500
+                },
+                breakpoints: {
+                    768: {
+                        spaceBetween: 60,
+                        slidesPerView: "auto"
+                    }
+                }
+            });
+        }
     }
     function spoller() {
         const spollersArray = document.querySelectorAll("[data-spollers]");

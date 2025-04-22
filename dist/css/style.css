@@ -1891,6 +1891,52 @@ textarea.input {
   height: 500px;
   margin-top: 50px
 }
+.s-about__container {
+  max-width: 1735px;
+  margin-left: auto;
+  padding-left: 15px
+}
+.s-about__body {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 60px
+}
+.s-about__content {
+  max-width: 700px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 140%
+}
+.s-about__content p {
+  margin: 0
+}
+.s-about__content p:not(:last-child) {
+  margin-bottom: 20px
+}
+.s-about__img {
+  width: 960px;
+  height: auto
+}
+.s-benefit {
+  padding: 70px 0;
+  background-color: #fff
+}
+.s-benefit__slide {
+  display: flex!important;
+  align-items: center;
+  gap: 30px;
+  width: -webkit-fit-content!important;
+  width: -moz-fit-content!important;
+  width: fit-content!important;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 140%
+}
+.s-benefit__slide-icon {
+  width: 70px;
+  display: block
+}
 .footer {
   padding: 70px 0;
   background-color: var(--black);
@@ -2043,6 +2089,9 @@ textarea.input {
   .s-work__items {
     gap: 30px
   }
+  .s-about__img {
+    width: 720px
+  }
 }
 @media (max-width:1365px) {
   .header__list {
@@ -2116,6 +2165,12 @@ textarea.input {
   }
   .s-contacts__item {
     padding: 0 30px
+  }
+  .s-about__body {
+    gap: 30px
+  }
+  .s-about__img {
+    width: 560px
   }
 }
 @media (max-width:1199px) {
@@ -2216,6 +2271,25 @@ textarea.input {
   }
   .s-contacts__btn-route {
     max-width: 350px
+  }
+  .s-about__container {
+    padding-left: 0
+  }
+  .s-about__title {
+    padding: 0 15px
+  }
+  .s-about__body {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%
+  }
+  .s-about__content {
+    padding: 0 15px;
+    width: 100%;
+    max-width: none
+  }
+  .s-about__img {
+    width: 720px
   }
   .footer__container {
     flex-wrap: wrap
@@ -2404,6 +2478,9 @@ textarea.input {
   .s-contacts__map {
     height: 400px
   }
+  .s-benefit {
+    padding: 50px 0
+  }
   .footer {
     padding: 50px 0
   }
@@ -2586,6 +2663,13 @@ textarea.input {
   .s-contacts__map {
     margin-top: 30px;
     height: 350px
+  }
+  .s-benefit__slide {
+    font-size: 18px;
+    gap: 20px
+  }
+  .s-benefit__slide-icon {
+    width: 50px
   }
   .footer {
     padding: 40px 0
