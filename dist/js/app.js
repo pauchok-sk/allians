@@ -63,6 +63,18 @@
         const im = new Inputmask("+7 (999) 999-99-99");
         im.mask(inputs);
     }
+    function jobsBtn() {
+        const buttons = document.querySelectorAll("[data-job-btn]");
+        if (buttons.length) {
+            const input = document.querySelector("#input-job");
+            buttons.forEach((btn => {
+                btn.addEventListener("click", (() => {
+                    const job = btn.dataset.jobBtn;
+                    input.value = job;
+                }));
+            }));
+        }
+    }
     function map() {
         const contactsMap = document.querySelector("#map");
         if (contactsMap) {
@@ -498,6 +510,7 @@
     mediaAdaptive();
     fileToggle();
     headerScroll();
+    jobsBtn();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });

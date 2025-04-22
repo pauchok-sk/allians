@@ -2144,13 +2144,18 @@ textarea.input {
   margin-top: 40px;
   font-size: 18px;
   font-weight: 300;
-  line-height: 140%
+  line-height: 140%;
+  padding-bottom: 40px;
+  border-bottom: 2px solid var(--light)
 }
 .s-jobs__spoller-content strong {
   font-weight: 700
 }
 .s-jobs__spoller-content p {
   margin: 0
+}
+.s-jobs__btn-respond {
+  margin-top: 40px
 }
 .s-jobs__form-wrapper {
   position: sticky;
@@ -2317,7 +2322,7 @@ textarea.input {
 }
 .footer__dev {
   margin-top: 30px;
-  display: flex;
+  display: flex!important;
   align-items: center;
   gap: 10px
 }
@@ -2572,6 +2577,10 @@ textarea.input {
     width: 100%
   }
   .s-jobs__spoller-content {
+    margin-top: 25px;
+    padding-bottom: 25px
+  }
+  .s-jobs__btn-respond {
     margin-top: 25px
   }
   .s-jobs__form-wrapper {
