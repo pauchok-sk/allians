@@ -1,5 +1,5 @@
 .input {
-  padding: 20px 28px;
+  padding: 16px 20px;
   border-radius: 4px;
   background-color: var(--shaft);
   outline: none;
@@ -25,4 +25,40 @@
 }
 textarea.input {
   resize: none;
+}
+
+.input-file {
+  display: none;
+}
+.label-file {
+  @include flex-between;
+  gap: 15px;
+  cursor: pointer;
+  padding: 16px 20px;
+  border-radius: 4px;
+  background-color: var(--shaft);
+  outline: none;
+  border: none;
+  width: 100%;
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 140%;
+  color: white;
+
+  &._white {
+    background-color: white;
+    color: var(--black);
+  }
+
+  span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
 }

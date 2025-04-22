@@ -1,7 +1,15 @@
 .header {
+  position: sticky;
+  top: 0;
   background-color: var(--black);
   color: white;
   padding: 24px 0px;
+  z-index: 100;
+  transition: transform .4s ease;
+  &._hide {
+    transform: translateY(-130px);
+  }
+
   @include tablet {
     padding: 18px 0px;
   }

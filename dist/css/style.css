@@ -327,7 +327,7 @@ body {
   line-height: 140%
 }
 .input {
-  padding: 20px 28px;
+  padding: 16px 20px;
   border-radius: 4px;
   background-color: var(--shaft);
   outline: 0;
@@ -368,6 +368,40 @@ body {
 }
 textarea.input {
   resize: none
+}
+.input-file {
+  display: none
+}
+.label-file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  cursor: pointer;
+  padding: 16px 20px;
+  border-radius: 4px;
+  background-color: var(--shaft);
+  outline: 0;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 140%;
+  color: #fff
+}
+.label-file._white {
+  background-color: #fff;
+  color: var(--black)
+}
+.label-file span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+.label-file svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0
 }
 .slider-nav {
   display: flex;
@@ -745,9 +779,19 @@ textarea.input {
   height: 65px!important
 }
 .header {
+  position: sticky;
+  top: 0;
   background-color: var(--black);
   color: #fff;
-  padding: 24px 0
+  padding: 24px 0;
+  z-index: 100;
+  transition: -webkit-transform .4s ease;
+  transition: transform .4s ease;
+  transition: transform .4s ease,-webkit-transform .4s ease
+}
+.header._hide {
+  -webkit-transform: translateY(-130px);
+  transform: translateY(-130px)
 }
 .header__container {
   display: grid;
@@ -1286,6 +1330,9 @@ textarea.input {
 }
 .s-prices__form-item._fill {
   flex: 1
+}
+.s-prices__form-item .input {
+  padding: 20px 28px!important
 }
 .s-prices__form-policy {
   margin: 0;
@@ -2025,6 +2072,121 @@ textarea.input {
   width: 100%;
   margin-top: 50px
 }
+.s-jobs {
+  margin-top: 50px
+}
+.s-jobs__body {
+  padding: 70px 0 100px 0;
+  background-color: #fff
+}
+.s-jobs__container {
+  display: flex;
+  align-items: start;
+  gap: 60px
+}
+.s-jobs__main {
+  flex: 1
+}
+.s-jobs__spoller {
+  width: 100%
+}
+.s-jobs__spoller:not(:last-child) {
+  margin-bottom: 10px
+}
+.s-jobs__spoller-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px 28px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: var(--light);
+  font-size: 18px;
+  line-height: 140%
+}
+.s-jobs__spoller-btn._spoller-active svg {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+.s-jobs__spoller-btn svg {
+  width: 16px;
+  height: 16px;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease,-webkit-transform .2s ease
+}
+.s-jobs__spoller-body {
+  padding: 40px;
+  border-radius: 4px;
+  border: 2px solid var(--light)
+}
+.s-jobs__list {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 40px;
+  row-gap: 20px
+}
+.s-jobs__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 140%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--gallery)
+}
+.s-jobs__item span:first-child {
+  opacity: .5
+}
+.s-jobs__spoller-content {
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 140%
+}
+.s-jobs__spoller-content strong {
+  font-weight: 700
+}
+.s-jobs__spoller-content p {
+  margin: 0
+}
+.s-jobs__form-wrapper {
+  position: sticky;
+  top: 20px;
+  width: 500px;
+  padding: 40px;
+  background-color: var(--red);
+  color: #fff;
+  border-radius: 4px;
+  flex-shrink: 0
+}
+.s-jobs__form-title {
+  position: relative;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 140%;
+  padding-left: 35px;
+  background: url(../img/figure-black.svg) top 0 left 0/20px auto no-repeat;
+  margin: 0 0 20px 0
+}
+.s-jobs__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px
+}
+.s-jobs__form-item {
+  width: 100%
+}
+.s-jobs__form-policy {
+  margin: 16px 0 0 0;
+  font-size: 15px;
+  line-height: 140%
+}
+.s-jobs__form-policy a {
+  font-weight: 700
+}
 .footer {
   padding: 70px 0;
   background-color: var(--black);
@@ -2266,6 +2428,20 @@ textarea.input {
   .s-archive__item-title {
     font-size: 20px
   }
+  .s-jobs__container {
+    gap: 40px
+  }
+  .s-jobs__spoller-body {
+    padding: 25px
+  }
+  .s-jobs__list {
+    gap: 25px;
+    row-gap: 20px
+  }
+  .s-jobs__form-wrapper {
+    width: 400px;
+    padding: 25px
+  }
 }
 @media (max-width:1199px) {
   .price-list {
@@ -2387,6 +2563,22 @@ textarea.input {
   }
   .s-archive__wrapper {
     grid-template-columns: repeat(2,1fr)
+  }
+  .s-jobs__container {
+    flex-wrap: wrap
+  }
+  .s-jobs__main {
+    flex: none;
+    width: 100%
+  }
+  .s-jobs__spoller-content {
+    margin-top: 25px
+  }
+  .s-jobs__form-wrapper {
+    position: static;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%
   }
   .footer__container {
     flex-wrap: wrap
@@ -2577,6 +2769,9 @@ textarea.input {
   }
   .s-benefit {
     padding: 50px 0
+  }
+  .s-jobs__body {
+    padding: 60px 0 80px 0
   }
   .footer {
     padding: 50px 0
@@ -2784,6 +2979,26 @@ textarea.input {
   .s-archive__btn-more {
     margin-top: 30px
   }
+  .s-jobs {
+    margin-top: 30px
+  }
+  .s-jobs__body {
+    padding: 50px 0
+  }
+  .s-jobs__list {
+    grid-template-columns: repeat(1,1fr);
+    gap: 15px
+  }
+  .s-jobs__item {
+    font-size: 16px;
+    padding-bottom: 15px
+  }
+  .s-jobs__spoller-content {
+    font-size: 16px
+  }
+  .s-jobs__form-title {
+    font-size: 24px
+  }
   .footer {
     padding: 40px 0
   }
@@ -2925,6 +3140,12 @@ textarea.input {
   .s-catalog::after {
     width: 80%
   }
+  .s-jobs__spoller-body {
+    padding: 15px
+  }
+  .s-jobs__form-wrapper {
+    padding: 25px 15px
+  }
 }
 @media (any-hover:hover) {
   .btn-arrow:hover span {
@@ -3064,6 +3285,9 @@ textarea.input {
   .s-archive__item:hover .s-archive__item-rect svg {
     -webkit-transform: rotate(0);
     transform: rotate(0)
+  }
+  .s-jobs__form-policy a:hover {
+    text-decoration: underline
   }
   .footer__tel:hover {
     opacity: .6
@@ -3219,6 +3443,9 @@ textarea.input {
   .s-archive__item:active .s-archive__item-rect svg {
     -webkit-transform: rotate(0);
     transform: rotate(0)
+  }
+  .s-jobs__form-policy a:active {
+    text-decoration: underline
   }
   .footer__tel:active {
     opacity: .6

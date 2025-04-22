@@ -36,6 +36,28 @@
             updateHeightBurger();
         }
     }
+    function fileToggle() {
+        const inputs = document.querySelectorAll(".input-file");
+        if (inputs.length) inputs.forEach((input => {
+            input.addEventListener("change", (e => {
+                if (e.target.files[0]) {
+                    const currentTitle = input.nextElementSibling.querySelector("span");
+                    currentTitle.textContent = e.target.files[0].name;
+                }
+            }));
+        }));
+    }
+    function headerScroll() {
+        const header = document.querySelector(".header");
+        if (header) {
+            let lastScrollTop = 0;
+            window.addEventListener("scroll", (() => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop && scrollTop >= header.clientHeight) header.classList.add("_hide"); else header.classList.remove("_hide");
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            }));
+        }
+    }
     function inputmask() {
         const inputs = document.querySelectorAll('input[type="tel"]');
         const im = new Inputmask("+7 (999) 999-99-99");
@@ -474,6 +496,8 @@
     sliders();
     inputmask();
     mediaAdaptive();
+    fileToggle();
+    headerScroll();
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
     });
