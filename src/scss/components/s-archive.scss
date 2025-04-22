@@ -1,0 +1,121 @@
+.s-archive {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    @include laptop {
+      gap: 30px;
+    }
+    @include laptop-middle {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet {
+      gap: 20px;
+    }
+    @include tablet-min {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: white;
+
+    @include hover {
+      .s-archive__item-title {
+        opacity: 0.7;
+      }
+      .s-archive__item-rect {
+        background-color: var(--thunder);
+
+        svg {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+  &__link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  &__item-gallery {
+    position: relative;
+    padding-bottom: 63%;
+    width: 100%;
+  }
+  &__item-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  &__item-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-top: 5px solid var(--red);
+    padding: 30px;
+    @include tablet {
+      padding: 20px;
+    }
+  }
+  &__item-title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 140%;
+    margin: 0;
+    transition: opacity .2s ease;
+    @include laptop {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 18px
+    }
+  }
+  &__item-footer {
+    @include flex-between;
+    gap: 20px;
+    padding-top: 20px;
+    margin-top: auto;
+  }
+  &__item-date {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 140%;
+  }
+  &__item-rect {
+    @include flex-center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--red);
+    border-radius: 4px;
+    color: white;
+    transition: background-color .2s ease;
+
+    @include tablet {
+      width: 45px;
+      height: 45px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      transform: rotate(45deg);
+      transition: transform .2s ease;
+    }
+  }
+  &__btn-more {
+    width: 100%;
+    margin-top: 50px;
+    @include tablet {
+      margin-top: 30px;
+    }
+  }
+}
